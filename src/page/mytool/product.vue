@@ -1,7 +1,7 @@
 <template>
   <div style="width:100%">
     <div class="serach-div">
-      <el-form :inline="true" :model="formInline" class="demo-form-inline">
+      <el-form :inline="true" label-width="120px"  :model="formInline" class="demo-form-inline">
         <el-form-item  label="产品名称">
           <el-input v-model="formInline.user" placeholder="产品名称"></el-input>
         </el-form-item>
@@ -25,10 +25,10 @@
         <el-button class="button" type="primary" icon="el-icon-search">搜索</el-button>
       </div>
     </div>
-    <el-table :data="tableData" style="width: 90%;margin:30px">
-      <el-table-column prop="date" label="产品名称" width="280"></el-table-column>
-      <el-table-column prop="name" label="产品类型" width="280"></el-table-column>
-      <el-table-column prop="address" label="产品编号" width="280"></el-table-column>
+    <el-table :data="tableData" style="width: 96%;margin:30px">
+      <el-table-column prop="name" label="产品名称" ></el-table-column>
+      <el-table-column prop="type" label="产品类型" ></el-table-column>
+      <el-table-column prop="date" label="产品编号" ></el-table-column>
       <el-table-column prop="address" label=" 适用客群/客户"></el-table-column>
      
     </el-table>
@@ -44,24 +44,28 @@ export default {
       },
       tableData: [
         {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          date: "ZYHZA20123",
+          name: "中银策略",
+          address: "小中型企业",
+          type:"固定收益类"
         },
         {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄"
+          date: "ZYHZA20322",
+          name: "中银汇增",
+          address: "小中型企业",
+          type:"固定收益类"
         },
         {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄"
+          date: "ZYHZA23111",
+          name: "中银乐享",
+          address: "小中型企业",
+          type:"固定收益类"
         },
         {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄"
+          date: "ZYHZA23422",
+          name: "中银日积月累",
+          address: "小中型企业",
+          type:"固定收益类"
         }
       ]
     };

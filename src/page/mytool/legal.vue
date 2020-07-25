@@ -52,10 +52,10 @@
         <el-button class="button" type="primary" icon="el-icon-search">搜索</el-button>
       </div>
     </div>
-    <el-table :data="tableData" style="width: 90%;margin:30px">
-      <el-table-column prop="date" label="产品名称" width="280"></el-table-column>
-      <el-table-column prop="name" label="产品类型" width="280"></el-table-column>
-      <el-table-column prop="address" label="产品编号" width="280"></el-table-column>
+    <el-table :data="tableData" style="width: 96%;margin:30px">
+      <el-table-column prop="name" label="权益名称" ></el-table-column>
+      <el-table-column prop="type" label="权益类别" ></el-table-column>
+      <el-table-column prop="date" label="权益说明"></el-table-column>
       <el-table-column prop="address" label=" 适用客群/客户"></el-table-column>
     </el-table>
   </div>
@@ -70,24 +70,28 @@ export default {
       },
       tableData: [
         {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          date: "开户期间可获赠积分",
+          name: "百亿积分大赠送",
+          address: "小中型企业",
+          type:"固定收益类"
         },
         {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄"
+          date: "办理理财产品可获得大礼",
+          name: "中银理财惊喜重重",
+          address: "小中型企业",
+          type:"固定收益类"
         },
         {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄"
+          date: "积分获取翻倍",
+          name: "中银乐享积分",
+          address: "小中型企业",
+          type:"固定收益类"
         },
         {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄"
+          date: "每日可获得红包",
+          name: "中银日日进金",
+          address: "小中型企业",
+          type:"固定收益类"
         }
       ]
     };
