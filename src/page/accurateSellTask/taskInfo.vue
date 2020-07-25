@@ -10,7 +10,7 @@
             <img v-else src="../../image/womanCard.png" alt="" style="width:100%;height:100%">
           </div>
           <div style="height:88px;margin:12px;">
-            <el-collapse>
+            <el-collapse v-model="actveNode">
               <!-- 用户标签 -->
               <el-collapse-item name="1">
                 <template slot="title">
@@ -142,7 +142,6 @@
             <div class="grid-content bg-purple">
               <img src="../../image/menuLitter.png" alt="" style="width:38px;height:38px;position:absolute;top:0;right:0" @click="showLitterMenu">
               <div v-show="showLMenu" style="position:absolute;top:0;right:0;z-index:2020">
-
               </div>
               <div style="padding:20px">
                 <div style="display:flex;align-items:center">
@@ -174,7 +173,23 @@
         </el-row>
         <el-row>
           <el-col :span="24">
-            <div class="grid-content bg-purple"></div>
+            <div class="grid-content bg-purple">
+              <div style="padding:20px">
+                <div style="display:flex;align-items:center">
+                  <i>
+                    <img src="../../image/verbalTrick.png" style="width:21.9px;height:24px">
+                  </i>
+                  <span style="font-size:22px;margin-left:20px">座席话术</span>
+                </div>
+                <div style="margin-top:17px">
+                  <div style="margin-top:5px">
+                    <span style="font-size:16px;color:#3F3F3F">
+                      尊敬的客户您好，之前有了解到您申请了我行的信用卡，现在我们针对贵宾客户有个信用卡 专项活动， 分期打折。也就是说您可以把您的账单分几次尝还，方便您的资金流动，不收取任务利息，只要少量的手续费， 或者您也可以直接将您的信用卡额度进行提现，然后分期尝还，除了手续也不收取任何费用，您看您需要办理。
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </el-col>
         </el-row>
         <el-row>
@@ -248,6 +263,14 @@
             </div>
           </el-col>
         </el-row>
+        <el-row>
+          <el-col :span="24">
+            <div style="margin-left:40%">
+              <el-button type="danger" style="width:100px;margin-right:5%">提交</el-button>
+              <el-button type="danger" style="width:100px" @click="feedback">返回</el-button>
+            </div>
+          </el-col>
+        </el-row>
       </el-main>
     </el-container>
   </div>
@@ -257,7 +280,7 @@
     data() {
       return {
         height: "",
-        actveNode: ["1", "2", "3"],
+        actveNode: ["1", "2", "3", '4'],
         showLMenu: false,
         gender: 'man',
         tableData: [{
@@ -310,7 +333,8 @@
     mounted() {
       this.height = window.screen.height;
       console.log(this.height);
-      // this.gender = this.$router.params.gender
+      this.gender = this.$route.params.gender
+      console.log(this.$route.params)
     },
     methods: {
       showLitterMenu() {
@@ -320,6 +344,11 @@
       handleClick(tab, event) {
         console.log(tab, event);
       },
+      feedback() {
+        this.$router.push({
+          name: 'task'
+        })
+      }
     }
   };
 </script>
