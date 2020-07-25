@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+// const _import = file => () => import('@/page/' + file + '.vue');
+
 Vue.use(Router)
 
 export default new Router({
@@ -20,6 +22,16 @@ export default new Router({
       path: 'producttool',
       name: 'producttool',
       component: resolve =>require(['@/page/mytool/product'],resolve) ,
+    },
+    {
+      path: '/accurateSellTask',
+      name: 'accurateSellTask',
+      component: resolve => require(['@/page/accurateSellTask/task'], resolve)
+    },
+    {
+      path: '/taskInfo',
+      name: 'taskInfo',
+      component: resolve => require(['@/page/accurateSellTask/taskInfo'], resolve)
     },
   ]
   }]
