@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <appheader></appheader>
-    <div style="display:flex;height:91%;">
+    <appheader style="height:10%;"></appheader>
+    <div style="display:flex;height:90%;">
       <appmenu></appmenu>
       <router-view />
     </div>
