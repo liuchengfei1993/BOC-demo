@@ -4,8 +4,10 @@
       <!-- 侧边个人信息 -->
       <el-aside width="25%" height='100%'>
         <div class="aside">
-          <div style="height:170px;margin:12px;background-color:#fff">
+          <div style="height:170px;margin:10px">
             <!-- 客户画像 -->
+            <img v-if="gender === 'man'" src="../../image/manCard.png" alt="" style="width:100%;height:100%">
+            <img v-else src="../../image/womanCard.png" alt="" style="width:100%;height:100%">
           </div>
           <div style="height:88px;margin:12px;">
             <el-collapse v-model="actveNode">
@@ -138,7 +140,10 @@
           </el-col>
           <el-col :span="12">
             <div class="grid-content bg-purple">
-              <img src="../../image/menuLitter.png" alt="" style="width:38px;height:38px;position:absolute;top:0;right:0">
+              <img src="../../image/menuLitter.png" alt="" style="width:38px;height:38px;position:absolute;top:0;right:0" @click="showLitterMenu">
+              <div v-show="showLMenu" style="position:absolute;top:0;right:0;z-index:2020">
+
+              </div>
               <div style="padding:20px">
                 <div style="display:flex;align-items:center">
                   <i>
@@ -188,7 +193,73 @@
         </el-row>
         <el-row>
           <el-col :span="24">
-            <div class="grid-content bg-purple"></div>
+            <div class="grid-content bg-purple" style="padding:0 20px;">
+              <div class="spaceRow">
+                <div class="leftRow">
+                  <img src="../../image/customer2.png" alt="" style="width:22px;height:17px;margin-right:10px;">
+                  <div style="font-size: 22px;color: #333333;">小结</div>
+                </div>
+                <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+                  <el-tab-pane name="first">
+                    <span slot="label" class="leftRow"><img src="../../image/callOut_red2.png" class="tabICon">
+                      外呼渠道</span>
+                  </el-tab-pane>
+                  <el-tab-pane name="second">
+                    <span slot="label" class="leftRow"><img src="../../image/message_pink2.png" class="tabICon">
+                      短信渠道</span>
+                  </el-tab-pane>
+                  <el-tab-pane name="third">
+                    <span slot="label" class="leftRow"><img src="../../image/weChat2.png" class="tabICon"> 微信渠道进线</span>
+                  </el-tab-pane>
+                </el-tabs>
+              </div>
+              <el-row :gutter="20">
+                <el-col :span="6" class="">
+                  <div class="leftRow" style="height:42px;border: 1px solid #DCDCDC;">
+                    <div style=" padding: 8px 10px;font-size: 14px;">呼叫状态</div>
+                    <div style="width:60%;">
+                      <el-select v-model="value" placeholder="请选择">
+                        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+                        </el-option>
+                      </el-select>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="6" class="">
+                  <div class="leftRow" style="height:42px;border: 1px solid #DCDCDC;">
+                    <div style=" padding: 8px 10px;font-size: 14px;">处理结果</div>
+                    <div style="width:60%;">
+                      <el-select v-model="value" placeholder="请选择" style="border:none">
+                        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+                        </el-option>
+                      </el-select>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="6" class="">
+                  <div class="leftRow" style="height:42px;border: 1px solid #DCDCDC;">
+                    <div style=" padding: 8px 10px;font-size: 14px;">是否预约</div>
+                    <div style="width:60%;">
+                      <el-select v-model="value" placeholder="请选择">
+                        <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
+                        </el-option>
+                      </el-select>
+                    </div>
+                  </div>
+                </el-col>
+                <el-col :span="6" class="">
+                  <div class="leftRow" style="height:42px;border: 1px solid #DCDCDC;">
+                    <div style=" padding: 8px 10px;font-size: 14px;">预约时间</div>
+                    <div style="width:60%;">
+                      <el-date-picker v-model="value1" type="date" placeholder="选择日期" style="width:100%;border:none;padding:0 0 0 10px；">
+                      </el-date-picker>
+                    </div>
+                  </div>
+                </el-col>
+              </el-row>
+              <el-input type="textarea" placeholder="请输入您的处理意见" v-model="textarea" maxlength="500" show-word-limit :rows="4" resize='none'>
+              </el-input>
+            </div>
           </el-col>
         </el-row>
       </el-main>
@@ -201,6 +272,8 @@
       return {
         height: "",
         actveNode: ["1", "2", "3"],
+        showLMenu: false,
+        gender: 'man',
         tableData: [{
             maintainName: "章三",
             projectName: "精准营销",
@@ -225,12 +298,42 @@
             maintainTime: "2018.09.20",
             maintainRes: "已提示"
           }
-        ]
+        ],
+        activeName: 'first',
+        value1: '',
+        textarea: '',
+        options: [{
+          value: '选项1',
+          label: '成功'
+        }, {
+          value: '选项2',
+          label: '失败'
+        }, {
+          value: '选项3',
+          label: '在线'
+        }, {
+          value: '选项4',
+          label: '忙碌'
+        }, {
+          value: '选项5',
+          label: '挂断'
+        }],
+        value: ''
       };
     },
     mounted() {
       this.height = window.screen.height;
       console.log(this.height);
+      // this.gender = this.$router.params.gender
+    },
+    methods: {
+      showLitterMenu() {
+        this.showLMenu = !this.showLMenu
+        console.log(this.showLMenu)
+      },
+      handleClick(tab, event) {
+        console.log(tab, event);
+      },
     }
   };
 </script>
@@ -276,5 +379,36 @@
 
   .el-table__header {
     padding: 0;
+  }
+
+  .leftRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .spaceRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .tabICon {
+    width: 23px;
+    height: 20px;
+    margin-right: 10px;
+  }
+
+  .inputBlock {
+    border: none;
+    width: 100%;
+    border-left: 1px solid #dcdcdc;
+    padding-left: 10px;
+  }
+
+  .el-input el-input--suffix {
+    border: none
   }
 </style>
