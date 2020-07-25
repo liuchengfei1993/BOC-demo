@@ -84,7 +84,6 @@
                 <input type="text" placeholder="请输入内容" class="inputBlock">
               </div>
             </div>
-
           </el-col>
           <el-col :span="5" class="">
             <div class="leftRow borderDC" style="height:42px;">
@@ -94,23 +93,20 @@
                 <input type="text" placeholder="请输入内容" class="inputBlock">
               </div>
             </div>
-
           </el-col>
           <el-col :span="7" class="">
             <div class="leftRow borderDC" style="height:42px;">
               <div class="font14 inputTitle">时间周期</div>
               <el-date-picker v-model="value1" type="daterange" range-separator="至" start-placeholder="开始日期"
-                end-placeholder="结束日期" style="width:77%;border:none;padding:0 0 0 10px;align-items: baseline;">
+                end-placeholder="结束日期" style="width:75%;border:none;padding:0 0 0 10px;align-items: baseline;">
               </el-date-picker>
             </div>
-
           </el-col>
           <el-col :span="2">
             <div class="search centerRow" style="height:42px;">
               <img src="../../image/search2.png" alt="" style="width:16px;height:17px;margin-right: 10px;">
               <div>搜索</div>
             </div>
-
           </el-col>
         </el-row>
         <el-row style="margin:0;" class="whiteBg borderDC">
@@ -215,7 +211,10 @@
 
       handleEdit(index, row) {
         console.log(index, row);
-        this.$router.push('/taskInfo');
+        this.$router.push({
+          path:'/taskInfo',
+          name: {'gender':'men'}
+        });
       },
 
       handleSelectionChange(val) {
