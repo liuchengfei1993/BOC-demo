@@ -20,6 +20,7 @@
           <el-menu-item index="2-2">精准营销任务</el-menu-item>
           <el-menu-item index="2-3">自选任务</el-menu-item>
           <el-menu-item index="2-4">临时任务</el-menu-item>
+          <el-menu-item index="2-5">预约任务</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
 
