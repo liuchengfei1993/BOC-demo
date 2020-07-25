@@ -47,12 +47,12 @@
         </el-menu-item>
         <el-menu-item class="tab2" index="5">
           <template slot="title">
-            <img src="@/image/lock.png" />
+            <img src="@/image/lock.png" style="transform: translateY(40%);" />
           </template>
         </el-menu-item>
         <el-menu-item class="tab2" index="6">
           <template slot="title">
-            <img src="@/image/theme.png" />
+            <img src="@/image/theme.png" style="transform: translateY(40%);"  />
           </template>
         </el-menu-item>
         <el-submenu index="7" style="width:150px" >
