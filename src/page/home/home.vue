@@ -1,6 +1,17 @@
 <template>
   <div style="width:100%">
     <div style="width:100%;display:flex">
+      <div style="width:40%">
+        <div class="sign">
+          <div>个人信息</div>
+        </div>
+        <div class="sign">
+          <div>个人信息</div>
+        </div>
+        <div class="sign">
+          <div>个人信息</div>
+        </div>
+      </div>
       <div style="width:60%">
         <div class="sign">
           <el-tabs style="margin-left:5px">
@@ -83,17 +94,6 @@
         <div class="sign">123</div>
         <div class="sign">132</div>
       </div>
-      <div style="width:40%">
-        <div class="sign">
-          <div>个人信息</div>
-        </div>
-        <div class="sign">
-          <div>个人信息</div>
-        </div>
-        <div class="sign">
-          <div>个人信息</div>
-        </div>
-      </div>
     </div>
   </div>
 </template>
@@ -105,33 +105,33 @@ export default {
         {
           date: "2016-05-02",
           name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          address: "上海市普陀区金沙江路 1518 弄",
         },
         {
           date: "2016-05-04",
           name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄"
+          address: "上海市普陀区金沙江路 1517 弄",
         },
         {
           date: "2016-05-01",
           name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄"
+          address: "上海市普陀区金沙江路 1519 弄",
         },
         {
           date: "2016-05-03",
           name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄"
-        }
-      ]
+          address: "上海市普陀区金沙江路 1516 弄",
+        },
+      ],
     };
   },
   methods: {
     gotask() {
       this.$router.push({
-        path: "/task"
+        path: "/task",
       });
-    }
-  }
+    },
+  },
 };
 </script>
  <style  scoped>

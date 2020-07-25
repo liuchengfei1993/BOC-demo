@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <appheader style="height:10%;"></appheader>
-    <div style="display:flex;height:90%;">
+    <appheader style="height:9%;"></appheader>
+    <div class="lion" >
       <appmenu></appmenu>
-      <router-view />
+      <router-view class="tap" />
     </div>
   </div>
 </template>
@@ -14,15 +14,24 @@ export default {
   components: { appheader, appmenu },
   data() {
     return {};
-  }
+  },
+  mounted() {
+    //原生获取屏幕高度
+  },
 };
 </script>
  <style  scoped>
-html,
-body,
 #app {
   height: 100%;
   padding: 0;
   margin: 0;
+  overflow-y: scroll;
+}
+.lion {
+  display: flex;
+  height: 91%;
+}
+.tap {
+  overflow-y: scroll;
 }
 </style>
