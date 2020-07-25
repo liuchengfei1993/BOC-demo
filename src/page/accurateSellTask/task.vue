@@ -98,7 +98,7 @@
             <div class="leftRow borderDC" style="height:42px;">
               <div class="font14 inputTitle">时间周期</div>
               <el-date-picker v-model="value1" type="daterange" range-separator="至" start-placeholder="开始日期"
-                end-placeholder="结束日期" style="width:77%;border:none;padding:0 0 0 10px;align-items: baseline;">
+                end-placeholder="结束日期" style="width:75%;border:none;padding:0 0 0 10px;align-items: baseline;">
               </el-date-picker>
             </div>
           </el-col>
@@ -211,7 +211,10 @@
 
       handleEdit(index, row) {
         console.log(index, row);
-        this.$router.push('/taskInfo');
+        this.$router.push({
+          path:'/taskInfo',
+          name: {'gender':'men'}
+        });
       },
 
       handleSelectionChange(val) {
