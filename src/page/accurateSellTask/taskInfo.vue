@@ -10,7 +10,7 @@
             <img v-else src="../../image/womanCard.png" alt="" style="width:100%;height:100%">
           </div>
           <div style="height:88px;margin:12px;">
-            <el-collapse v-model="actveNode">
+            <el-collapse>
               <!-- 用户标签 -->
               <el-collapse-item name="1">
                 <template slot="title">
@@ -174,21 +174,7 @@
         </el-row>
         <el-row>
           <el-col :span="24">
-            <div class="grid-content bg-purple">
-              <div style="padding:20px">
-                <div style="display:flex;align-items:center">
-                  <i>
-                    <img src="../../image/verbalTrick.png" style="width:21.9px;height:24px">
-                  </i>
-                  <span style="font-size:22px;margin-left:20px">座席话术</span>
-                </div>
-                <div style="margin-top:5px">
-                  <span style="font-size:16px;color:#3F3F3F">
-                    尊敬的客户您好，之前有了解到您申请了我行的信用卡，现在我们针对贵宾客户有个信用卡 专项活动， 分期打折。也就是说您可以把您的账单分几次尝还，方便您的资金流动，不收取任务利息，只要少量的手续费， 或者您也可以直接将您的信用卡额度进行提现，然后分期尝还，除了手续也不收取任何费用，您看您需要办理。
-                  </span>
-                </div>
-              </div>
-            </div>
+            <div class="grid-content bg-purple"></div>
           </el-col>
         </el-row>
         <el-row>
