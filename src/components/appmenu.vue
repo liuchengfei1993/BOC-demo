@@ -10,7 +10,7 @@
     </div>
     <el-menu v-show="showlist" style="width:150px" background-color="#262931">
       <el-menu-item index="1">
-        <span slot="title">我的客户</span>
+        <span slot="title" @click="tocustom">我的客户</span>
       </el-menu-item>
       <el-submenu index="2">
         <template slot="title">
@@ -64,6 +64,11 @@ export default {
     toproduct() {
       this.$router.push({
         path: "/producttool",
+      });
+    },
+    tocustom(){
+      this.$router.push({
+        path: "/custom",
       });
     },
     gotolegal() {

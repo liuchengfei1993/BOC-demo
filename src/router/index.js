@@ -33,6 +33,11 @@ export default new Router({
       name: 'task',
       component: resolve => require(['@/page/accurateSellTask/task'], resolve)
     },
+     {
+      path: '/custom',
+      name: 'custom',
+      component: resolve => require(['@/page/mycustom/custom'], resolve)
+    },
     {
       path: '/taskInfo',
       name: 'taskInfo',
