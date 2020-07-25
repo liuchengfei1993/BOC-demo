@@ -97,8 +97,7 @@
           <el-col :span="7" class="">
             <div class="leftRow borderDC" style="height:42px;">
               <div class="font14 inputTitle">时间周期</div>
-              <el-date-picker v-model="value1" type="daterange" range-separator="至" start-placeholder="开始日期"
-                end-placeholder="结束日期" style="width:75%;border:none;padding:0 0 0 10px;align-items: baseline;">
+              <el-date-picker v-model="value1" type="daterange" range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期" style="width:75%;border:none;padding:0 0 0 10px;align-items: baseline;">
               </el-date-picker>
             </div>
           </el-col>
@@ -132,8 +131,7 @@
             </el-tab-pane>
           </el-tabs>
 
-          <el-table ref="multipleTable" :data="tableData" tooltip-effect="dark" style="width: 100%"
-            @selection-change="handleSelectionChange">
+          <el-table ref="multipleTable" :data="tableData" tooltip-effect="dark" style="width: 100%" @selection-change="handleSelectionChange">
             <el-table-column type="selection" width="55" align="center">
             </el-table-column>
             <el-table-column prop="name" label="员工姓名" width="120" align="center">
@@ -176,31 +174,36 @@
           name: '王小虎',
           jobName: "前端开发",
           address: '上海市普陀区金沙江路 1518 弄',
-          isUsed: 'Sta'
+          isUsed: 'Sta',
+          gender: 'man'
         }, {
           creatTime: '2016-05-03',
-          name: '王小虎',
+          name: '宋佳',
           jobName: "前端开发",
           address: '上海市普陀区金沙江路 1518 弄',
-          isUsed: 'Sta'
+          isUsed: 'Sta',
+          gender: 'woman'
         }, {
           creatTime: '2016-05-03',
-          name: '王小虎',
+          name: '王倩',
           jobName: "前端开发",
           address: '上海市普陀区金沙江路 1518 弄',
-          isUsed: 'Sta'
+          isUsed: 'Sta',
+          gender: 'woman'
         }, {
           creatTime: '2016-05-03',
-          name: '王小虎',
+          name: '李雷',
           jobName: "前端开发",
           address: '上海市普陀区金沙江路 1518 弄',
-          isUsed: 'Sta'
+          isUsed: 'Sta',
+          gender: 'man'
         }, {
           creatTime: '2016-05-03',
-          name: '王小虎',
+          name: '韩梅梅',
           jobName: "前端开发",
           address: '上海市普陀区金沙江路 1518 弄',
-          isUsed: 'Sta'
+          isUsed: 'Sta',
+          gender: 'woman'
         }],
       };
     },
@@ -212,8 +215,8 @@
       handleEdit(index, row) {
         console.log(index, row);
         this.$router.push({
-          path:'/taskInfo',
-          name: {'gender':'men'}
+          name: 'taskInfo',
+          params: { gender: row.gender }
         });
       },
 
