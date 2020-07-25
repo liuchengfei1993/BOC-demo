@@ -111,32 +111,36 @@
         </el-row>
         <el-row :gutter="20" style="margin:0;padding:10px 20px;" class="whiteBg borderDC">
           <div class="leftRow">
-            <div class="centerRow" style="border-left:1px solid #dcdcdc;padding:0 10px;">
+            <div class="centerRow behindLine" style="">
               <img src="../../image/callOut_red2.png" class="tabICon">
               <el-button type="text">人工外呼</el-button>
             </div>
 
-            <div class="centerRow" style="border-left:1px solid #dcdcdc;padding:0 10px;">
+            <div class="centerRow behindLine" style="">
               <img src="../../image/message_pink2.png" class="tabICon">
               <el-button type="text">短信</el-button>
             </div>
 
-            <div class="centerRow" style="border-left:1px solid #dcdcdc;padding:0 10px;">
+            <div class="centerRow behindLine" style="">
               <img src="../../image/AI2.png" class="tabICon">
               <el-button type="text">智能外呼</el-button>
             </div>
 
-            <div class="centerRow" style="border-left:1px solid #dcdcdc;padding:0 10px;">
+            <div class="centerRow behindLine" style="">
               <img src="../../image/phoneBank2.png" class="tabICon">
               <el-button type="text">手机银行推送</el-button>
             </div>
 
-            <div class="centerRow" style="border-left:1px solid #dcdcdc;padding:0 10px;border-right:1px solid #dcdcdc;">
+            <div class="centerRow behindLine" style="">
               <img src="../../image/weChat2.png" class="tabICon">
               <el-button type="text">微信渠道进线</el-button>
             </div>
-          </div>
 
+            <div class="centerRow behindLine">
+              <img src="../../image/weChat2.png" class="tabICon" style="visibility: hidden;">
+              <el-button type="text" style="visibility: hidden;">微信渠道进线</el-button>
+            </div>
+          </div>
 
           <el-table ref="multipleTable" :data="tableData" tooltip-effect="dark" style="width: 100%"
             @selection-change="handleSelectionChange">
@@ -340,5 +344,13 @@
     width: 23px;
     height: 20px;
     margin-right: 10px;
+  }
+
+  .behindLine::before{
+    content: ' ';
+    height: 16px;
+    width: 1px;
+    background: #dcdcdc;
+    margin: 0 20px;
   }
 </style>
