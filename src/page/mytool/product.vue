@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="width:90%">
     <div class="serach-div">
       <el-form :inline="true" :model="formInline" class="demo-form-inline">
         <el-form-item label="审批人">
@@ -33,7 +33,11 @@ export default {
  <style  scoped>
 .serach-div {
   background-color: #fff;
+  width:100%;
   margin: 15px;
-  border: 1px solid #a71e32;
+  border: 1px solid #ccc;
+}
+.demo-form-inline{
+  padding:20px
 }
 </style>

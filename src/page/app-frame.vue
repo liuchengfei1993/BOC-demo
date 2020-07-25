@@ -1,14 +1,10 @@
 <template>
-  <div>
+  <div id="app">
     <appheader></appheader>
-    <el-row>
-      <el-col style="background-color:#262931;height:100%"  :span="1.5">
-        <appmenu></appmenu>
-      </el-col>
-      <el-col :span="22.5">
-        <router-view />
-      </el-col>
-    </el-row>
+    <div style="display:flex;height:91%;">
+      <appmenu></appmenu>
+      <router-view />
+    </div>
   </div>
 </template>
 <script>
@@ -22,4 +18,11 @@ export default {
 };
 </script>
  <style  scoped>
+html,
+body,
+#app {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
 </style>
