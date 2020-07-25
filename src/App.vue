@@ -24,6 +24,6 @@ body,
   height: 100%;
   padding: 0;
   margin: 0;
-  background: #F2F2F2
+  background: #f2f2f2;
 }
 </style>
