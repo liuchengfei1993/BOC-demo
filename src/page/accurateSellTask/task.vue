@@ -97,7 +97,8 @@
           <el-col :span="7" class="">
             <div class="leftRow borderDC" style="height:42px;">
               <div class="font14 inputTitle">时间周期</div>
-              <el-date-picker v-model="value1" type="daterange" range-separator="至" start-placeholder="开始日期" end-placeholder="结束日期" style="width:75%;border:none;padding:0 0 0 10px;align-items: baseline;">
+              <el-date-picker v-model="value1" type="daterange" range-separator="至" start-placeholder="开始日期"
+                end-placeholder="结束日期" style="width:75%;border:none;padding:0 0 0 10px;align-items: baseline;">
               </el-date-picker>
             </div>
           </el-col>
@@ -108,31 +109,38 @@
             </div>
           </el-col>
         </el-row>
-        <el-row style="margin:0;" class="whiteBg borderDC">
-          <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-            <el-tab-pane name="first">
-              <span slot="label" class="leftRow"><img src="../../image/callOut_red2.png" class="tabICon"> 人工外呼</span>
+        <el-row :gutter="20" style="margin:0;padding:10px 20px;" class="whiteBg borderDC">
+          <div class="leftRow">
+            <div class="centerRow" style="border-left:1px solid #dcdcdc;padding:0 10px;">
+              <img src="../../image/callOut_red2.png" class="tabICon">
+              <el-button type="text">人工外呼</el-button>
+            </div>
 
-            </el-tab-pane>
-            <el-tab-pane name="second">
-              <span slot="label" class="leftRow"><img src="../../image/message_pink2.png" class="tabICon"> 短信量</span>
+            <div class="centerRow" style="border-left:1px solid #dcdcdc;padding:0 10px;">
+              <img src="../../image/message_pink2.png" class="tabICon">
+              <el-button type="text">短信</el-button>
+            </div>
 
-            </el-tab-pane>
-            <el-tab-pane name="third">
-              <span slot="label" class="leftRow"><img src="../../image/AI2.png" class="tabICon"> 智能外呼</span>
+            <div class="centerRow" style="border-left:1px solid #dcdcdc;padding:0 10px;">
+              <img src="../../image/AI2.png" class="tabICon">
+              <el-button type="text">智能外呼</el-button>
+            </div>
 
-            </el-tab-pane>
-            <el-tab-pane name="fourth">
-              <span slot="label" class="leftRow"><img src="../../image/phoneBank2.png" class="tabICon"> 手机银行推送</span>
+            <div class="centerRow" style="border-left:1px solid #dcdcdc;padding:0 10px;">
+              <img src="../../image/phoneBank2.png" class="tabICon">
+              <el-button type="text">手机银行推送</el-button>
+            </div>
 
-            </el-tab-pane>
-            <el-tab-pane name="forth">
-              <span slot="label" class="leftRow"><img src="../../image/weChat2.png" class="tabICon"> 微信渠道进线</span>
-            </el-tab-pane>
-          </el-tabs>
+            <div class="centerRow" style="border-left:1px solid #dcdcdc;padding:0 10px;border-right:1px solid #dcdcdc;">
+              <img src="../../image/weChat2.png" class="tabICon">
+              <el-button type="text">微信渠道进线</el-button>
+            </div>
+          </div>
 
-          <el-table ref="multipleTable" :data="tableData" tooltip-effect="dark" style="width: 100%" @selection-change="handleSelectionChange">
-            <el-table-column type="selection" width="55" align="center">
+
+          <el-table ref="multipleTable" :data="tableData" tooltip-effect="dark" style="width: 100%"
+            @selection-change="handleSelectionChange">
+            <el-table-column type="selection" width="45" align="center">
             </el-table-column>
             <el-table-column prop="name" label="员工姓名" width="120" align="center">
             </el-table-column>
@@ -208,15 +216,14 @@
       };
     },
     methods: {
-      handleClick(tab, event) {
-        console.log(tab, event);
-      },
 
       handleEdit(index, row) {
         console.log(index, row);
         this.$router.push({
           name: 'taskInfo',
-          params: { gender: row.gender }
+          params: {
+            gender: row.gender
+          }
         });
       },
 
