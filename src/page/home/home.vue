@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div>
-fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffF
-    </div>
+    <div>首页</div>
   </div>
 </template>
 <script>

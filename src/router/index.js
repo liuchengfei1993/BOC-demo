@@ -15,5 +15,12 @@ export default new Router({
       path: 'home',
       name: 'Home',
       component: resolve =>require(['@/page/home/home'],resolve) ,
-    }]}]
+    },
+    {
+      path: 'producttool',
+      name: 'producttool',
+      component: resolve =>require(['@/page/mytool/product'],resolve) ,
+    },
+  ]
+  }]
 })
