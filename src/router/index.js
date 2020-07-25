@@ -8,12 +8,19 @@ export default new Router({
     name: 'Login',
     component:resolve =>require(['@/page/login/login'],resolve)
   },
-   {
+  {
     path: '/',
     component:resolve =>require(['@/page/app-frame'],resolve) ,
     children: [{
       path: 'home',
       name: 'Home',
       component: resolve =>require(['@/page/home/home'],resolve) ,
-    }]}]
+    }]
+  },
+  {
+    path: '/accurateSellTask',
+    name: 'accurateSellTask',
+    component:resolve =>require(['@/page/accurateSellTask/task'],resolve)
+  }  
+  ]
 })
