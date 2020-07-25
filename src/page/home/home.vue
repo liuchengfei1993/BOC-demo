@@ -4,7 +4,7 @@
       <img style="width:518px;height:820px;margin:10px" src="@/image/top1.png" />
       <div style="width:60%">
         <div class="sign">
-          <el-tabs style="margin-left:5px">
+          <el-tabs style="margin-left:20px">
             <el-tab-pane label="必做任务">
               <el-tag>流失挽回</el-tag>
               <el-tag>理财到期</el-tag>
