@@ -1,24 +1,51 @@
 <template>
   <div style="width:100%">
     <div class="serach-div">
-      <el-form :inline="true" :model="formInline" class="demo-form-inline">
-        <el-form-item  label="产品名称">
-          <el-input v-model="formInline.user" placeholder="产品名称"></el-input>
+      <el-form :inline="true" label-width="100px" :model="formInline" class="demo-form-inline">
+        <el-form-item label="目标客户">
+          <el-input v-model="formInline.user" placeholder="目标客户"></el-input>
         </el-form-item>
-        <el-form-item label="产品类型">
-          <el-select v-model="formInline.region" placeholder="产品类型">
+        <el-form-item label="权益主题">
+          <el-select style="width:200px" v-model="formInline.region" placeholder="权益主题">
             <el-option label="类型一" value="shanghai"></el-option>
             <el-option label="类型二" value="beijing"></el-option>
           </el-select>
         </el-form-item>
-        <el-form-item label="产品编号">
-          <el-input v-model="formInline.user" placeholder="产品名称"></el-input>
+        <el-form-item label="主推产品">
+          <el-input v-model="formInline.user" placeholder="主推产品"></el-input>
         </el-form-item>
-        <el-form-item label="适用客群/客户">
-          <el-select v-model="formInline.region" placeholder="产品类型">
+        <el-form-item label="权益类别">
+          <el-select style="width:200px" v-model="formInline.region" placeholder="权益类别">
             <el-option label="类型一" value="shanghai"></el-option>
             <el-option label="类型二" value="beijing"></el-option>
           </el-select>
+        </el-form-item>
+        <el-form-item label="机构层级">
+          <el-input v-model="formInline.user" placeholder="主推产品"></el-input>
+        </el-form-item>
+        <el-form-item label="权益内容">
+          <el-input v-model="formInline.user" placeholder="主推产品"></el-input>
+        </el-form-item>
+        <el-form-item label="权益价值">
+          <el-input v-model="formInline.user" placeholder="主推产品"></el-input>
+        </el-form-item>
+        <el-form-item label="开始日期">
+          <el-date-picker  style="width:200px" type="date" placeholder="选择日期"></el-date-picker>
+        </el-form-item>
+        <el-form-item label="截至日期">
+          <el-date-picker  style="width:200px" type="date" placeholder="选择日期"></el-date-picker>
+        </el-form-item>
+         <el-form-item label="参与流程">
+          <el-input v-model="formInline.user" placeholder="主推产品"></el-input>
+        </el-form-item>
+         <el-form-item label="宣传素材">
+          <el-input v-model="formInline.user" placeholder="主推产品"></el-input>
+        </el-form-item>
+        <el-form-item label="推荐话术">
+          <el-input v-model="formInline.user" placeholder="主推产品"></el-input>
+        </el-form-item>
+        <el-form-item label="联系人">
+          <el-input v-model="formInline.user" placeholder="主推产品"></el-input>
         </el-form-item>
       </el-form>
       <div class="search-button">
@@ -30,7 +57,6 @@
       <el-table-column prop="name" label="产品类型" width="280"></el-table-column>
       <el-table-column prop="address" label="产品编号" width="280"></el-table-column>
       <el-table-column prop="address" label=" 适用客群/客户"></el-table-column>
-     
     </el-table>
   </div>
 </template>
