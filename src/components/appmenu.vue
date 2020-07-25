@@ -3,9 +3,10 @@
     <div style="width:60px;background-color: #262931;height:100%">
       <img
         style="margin-left:20px;width:20px;margin-top:25px"
-        @click="getlist"
-        src="@/image/menu.png"
+        @click="gohome"
+        src="@/image/homeis.png"
       />
+      <img class="image1" @click="getlist" src="@/image/menu.png" />
     </div>
     <el-menu v-show="showlist" style="width:150px" background-color="#262931">
       <el-menu-item index="1">
@@ -43,7 +44,7 @@
 export default {
   data() {
     return {
-      showlist: false
+      showlist: false,
     };
   },
   methods: {
@@ -54,17 +55,23 @@ export default {
         this.showlist = true;
       }
     },
-    toproduct(){
+    gohome() {
+      this.showlist = false;
       this.$router.push({
-        path: '/producttool'
+        path: "/home",
       });
     },
-    gotolegal(){
+    toproduct() {
       this.$router.push({
-        path: '/legal'
+        path: "/producttool",
       });
     },
-  }
+    gotolegal() {
+      this.$router.push({
+        path: "/legal",
+      });
+    },
+  },
 };
 </script>
  <style  scoped>
@@ -77,7 +84,12 @@ export default {
 .el-menu-item.is-active {
   background-color: #a71e32 !important ;
 }
-.el-submenu .el-menu-item{
-      min-width: 50px;
+.el-submenu .el-menu-item {
+  min-width: 50px;
+}
+.image1 {
+  margin-left: 20px;
+  width: 20px;
+  margin-top: 25px;
 }
 </style>
