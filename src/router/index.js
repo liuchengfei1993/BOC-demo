@@ -29,8 +29,8 @@ export default new Router({
       component: resolve =>require(['@/page/mytool/legal'],resolve) ,
     },
     {
-      path: '/accurateSellTask',
-      name: 'accurateSellTask',
+      path: '/task',
+      name: 'task',
       component: resolve => require(['@/page/accurateSellTask/task'], resolve)
     },
     {
