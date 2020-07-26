@@ -113,33 +113,30 @@
           <div class="leftRow">
             <div class="centerRow behindLine" style="">
               <img src="../../image/callOut_red2.png" class="tabICon">
-              <el-button type="text">人工外呼</el-button>
+              <el-button type="text" style="color: #a71e32;">人工外呼</el-button>
             </div>
 
             <div class="centerRow behindLine" style="">
               <img src="../../image/message_pink2.png" class="tabICon">
-              <el-button type="text">短信</el-button>
+              <el-button type="text" style="color: #a71e32;">短信</el-button>
             </div>
 
             <div class="centerRow behindLine" style="">
               <img src="../../image/AI2.png" class="tabICon">
-              <el-button type="text">智能外呼</el-button>
+              <el-button type="text" style="color: #a71e32;">智能外呼</el-button>
             </div>
 
             <div class="centerRow behindLine" style="">
               <img src="../../image/phoneBank2.png" class="tabICon">
-              <el-button type="text">手机银行推送</el-button>
+              <el-button type="text" style="color: #a71e32;">手机银行推送</el-button>
             </div>
 
             <div class="centerRow behindLine" style="">
               <img src="../../image/weChat2.png" class="tabICon">
-              <el-button type="text">微信渠道进线</el-button>
+              <el-button type="text" style="color: #a71e32;">微信渠道进线</el-button>
             </div>
-
-            <div class="centerRow behindLine">
-              <img src="../../image/weChat2.png" class="tabICon" style="visibility: hidden;">
-              <el-button type="text" style="visibility: hidden;">微信渠道进线</el-button>
-            </div>
+            <!-- 排版占位div -->
+            <div class="behindLine centerRow"></div>
           </div>
 
           <el-table ref="multipleTable" :data="tableData" tooltip-effect="dark" style="width: 100%"
@@ -158,10 +155,13 @@
             </el-table-column>
             <el-table-column label="操作" width="120" align="center">
               <template slot-scope="scope">
-                <el-button type="text" @click="handleEdit(scope.$index, scope.row)">查看详情</el-button>
+                <el-button type="text" @click="handleEdit(scope.$index, scope.row)" style="color: #a71e32;">查看详情
+                </el-button>
               </template>
             </el-table-column>
           </el-table>
+          <el-pagination background layout="prev, pager, next" :total="tableData.length" class="rightRow"
+            style="margin-top:20px;"></el-pagination>
         </el-row>
       </el-main>
     </el-container>
@@ -268,14 +268,6 @@
     justify-content: space-around;
   }
 
-  .rightRow {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
   .leftRow {
     display: flex;
     flex-direction: row;
@@ -288,6 +280,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+  }
+
+  .rightRow {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
   }
 
   .twoSideBorder {
@@ -346,7 +346,7 @@
     margin-right: 10px;
   }
 
-  .behindLine::before{
+  .behindLine::before {
     content: ' ';
     height: 16px;
     width: 1px;
