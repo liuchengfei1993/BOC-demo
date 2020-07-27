@@ -25,6 +25,7 @@
           this.$message.error('用户名或密码错误');
           return
         }
+        sessionStorage.setItem('login',true)
         this.$router.push({
           path: "/home"
         });

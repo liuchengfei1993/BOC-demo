@@ -6,7 +6,14 @@
 
 <script>
 export default {
-  name: "App"
+  name: "App",
+  mounted(){
+    if(!sessionStorage.getItem('login')){
+      this.$router.push({
+          path: "/login"
+        });
+    }
+  }
 };
 </script>
 

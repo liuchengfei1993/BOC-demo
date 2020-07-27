@@ -5,8 +5,8 @@
       <img class="image1" @click="getlist" src="@/image/menu.png" />
     </div>
     <el-menu v-show="showlist" style="width:150px" background-color="#262931">
-      <el-menu-item index="1">
-        <span slot="title" @click="tocustom">我的客户</span>
+      <el-menu-item index="1" @click="tocustom">
+        <span slot="title" >我的客户</span>
       </el-menu-item>
       <el-submenu index="2">
         <template slot="title">
