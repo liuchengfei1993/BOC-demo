@@ -20,13 +20,16 @@
                   <span style="margin-left:15px">用户标签</span>
                 </template>
                 <div style="margin-top:5px;display:flex;align-content:center;flex-wrap:wrap">
-                  <div style="padding:5px 10px;margin:5px 5px;border:1px solid #CFECFF ;border-radius:4px;background-color:#CFECFF">
+                  <div
+                    style="padding:5px 10px;margin:5px 5px;border:1px solid #CFECFF ;border-radius:4px;background-color:#CFECFF">
                     <span>分期达人</span>
                   </div>
-                  <div style="padding:5px 10px;margin:5px 5px;border:1px solid #BDF4D3;border-radius:4px;background-color:#BDF4D3">
+                  <div
+                    style="padding:5px 10px;margin:5px 5px;border:1px solid #BDF4D3;border-radius:4px;background-color:#BDF4D3">
                     <span>中高端钻石级用户</span>
                   </div>
-                  <div style="padding:5px 10px;margin:5px 5px;border:1px solid #F5D0BB;border-radius:4px;background-color:#F5D0BB ">
+                  <div
+                    style="padding:5px 10px;margin:5px 5px;border:1px solid #F5D0BB;border-radius:4px;background-color:#F5D0BB ">
                     <span>专属用户</span>
                   </div>
                 </div>
@@ -127,8 +130,10 @@
                   <img src="../../image/pointLeft.png" alt="" style="width:30px;height:16px">
                 </div>
                 <div style="margin-top:14px">
-                  <span style="background-color:#FAFAFA;padding:4px;border-right:1px solid #DCDCDC">产品编号</span><span style="background-color:#FAFAFA;padding:4px">746538745001</span>
-                  <span style="background-color:#FAFAFA;padding:4px;border-right:1px solid #DCDCDC">产品类型</span><span style="background-color:#FAFAFA;padding:4px">信用卡客户</span>
+                  <span style="background-color:#FAFAFA;padding:4px;border-right:1px solid #DCDCDC">产品编号</span><span
+                    style="background-color:#FAFAFA;padding:4px">746538745001</span>
+                  <span style="background-color:#FAFAFA;padding:4px;border-right:1px solid #DCDCDC">产品类型</span><span
+                    style="background-color:#FAFAFA;padding:4px">信用卡客户</span>
                 </div>
                 <div style="margin-top:5px">
                   <span style="font-size:16px;color:#3F3F3F">
@@ -140,7 +145,8 @@
           </el-col>
           <el-col :span="12">
             <div class="grid-content bg-purple">
-              <img src="../../image/menuLitter.png" alt="" style="width:38px;height:38px;position:absolute;top:0;right:0" @click="showLitterMenu">
+              <img src="../../image/menuLitter.png" alt=""
+                style="width:38px;height:38px;position:absolute;top:0;right:0" @click="showLitterMenu">
               <div v-show="showLMenu" style="position:absolute;top:0;right:0;z-index:2020">
               </div>
               <div style="padding:20px">
@@ -159,7 +165,8 @@
                   </span>
                   <img src="../../image/pointLeft.png" alt="" style="width:30px;height:16px">
                   <div style="margin-top:14px">
-                    <span style="background-color:#FAFAFA;padding:4px;border-right:1px solid #DCDCDC">权益类型</span><span style="background-color:#FAFAFA;padding:4px">A类权益</span>
+                    <span style="background-color:#FAFAFA;padding:4px;border-right:1px solid #DCDCDC">权益类型</span><span
+                      style="background-color:#FAFAFA;padding:4px">A类权益</span>
                   </div>
                   <div style="margin-top:5px">
                     <span style="font-size:16px;color:#3F3F3F">
@@ -184,7 +191,8 @@
                 <div style="margin-top:17px">
                   <div style="margin-top:5px">
                     <span style="font-size:16px;color:#3F3F3F">
-                      尊敬的客户您好，之前有了解到您申请了我行的信用卡，现在我们针对贵宾客户有个信用卡 专项活动， 分期打折。也就是说您可以把您的账单分几次尝还，方便您的资金流动，不收取任务利息，只要少量的手续费， 或者您也可以直接将您的信用卡额度进行提现，然后分期尝还，除了手续也不收取任何费用，您看您需要办理。
+                      尊敬的客户您好，之前有了解到您申请了我行的信用卡，现在我们针对贵宾客户有个信用卡 专项活动， 分期打折。也就是说您可以把您的账单分几次尝还，方便您的资金流动，不收取任务利息，只要少量的手续费，
+                      或者您也可以直接将您的信用卡额度进行提现，然后分期尝还，除了手续也不收取任何费用，您看您需要办理。
                     </span>
                   </div>
                 </div>
@@ -194,25 +202,30 @@
         </el-row>
         <el-row>
           <el-col :span="24">
-            <div class="grid-content bg-purple" style="padding:0 20px;">
+            <div class="grid-content bg-purple" style="padding:20px;">
               <div class="spaceRow">
                 <div class="leftRow">
                   <img src="../../image/customer2.png" alt="" style="width:22px;height:17px;margin-right:10px;">
                   <div style="font-size: 22px;color: #333333;">小结</div>
                 </div>
-                <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
-                  <el-tab-pane name="first">
-                    <span slot="label" class="leftRow"><img src="../../image/callOut_red2.png" class="tabICon">
-                      外呼渠道</span>
-                  </el-tab-pane>
-                  <el-tab-pane name="second">
-                    <span slot="label" class="leftRow"><img src="../../image/message_pink2.png" class="tabICon">
-                      短信渠道</span>
-                  </el-tab-pane>
-                  <el-tab-pane name="third">
-                    <span slot="label" class="leftRow"><img src="../../image/weChat2.png" class="tabICon"> 微信渠道进线</span>
-                  </el-tab-pane>
-                </el-tabs>
+                <div class="leftRow" style="margin:10px 8px;">
+                  <div class="centerRow behindLine" style="">
+                    <img src="../../image/callOut_red2.png" class="tabICon">
+                    <el-button type="text" style="color: #a71e32;">外呼渠道</el-button>
+                  </div>
+
+                  <div class="centerRow behindLine" style="">
+                    <img src="../../image/message_pink2.png" class="tabICon">
+                    <el-button type="text" style="color: #a71e32;">短信</el-button>
+                  </div>
+
+                  <div class="centerRow behindLine" style="">
+                    <img src="../../image/weChat2.png" class="tabICon">
+                    <el-button type="text" style="color: #a71e32;">微信渠道进线</el-button>
+                  </div>
+                  <!-- 排版占位div -->
+                  <div class="behindLine centerRow"></div>
+                </div>
               </div>
               <el-row :gutter="20">
                 <el-col :span="6" class="">
@@ -252,13 +265,15 @@
                   <div class="leftRow" style="height:42px;border: 1px solid #DCDCDC;">
                     <div style=" padding: 8px 10px;font-size: 14px;">预约时间</div>
                     <div style="width:60%;">
-                      <el-date-picker v-model="value1" type="date" placeholder="选择日期" style="width:100%;border:none;padding:0 0 0 10px；">
+                      <el-date-picker v-model="value1" type="date" placeholder="选择日期"
+                        style="width:100%;border:none;padding:0 0 0 10px；">
                       </el-date-picker>
                     </div>
                   </div>
                 </el-col>
               </el-row>
-              <el-input type="textarea" placeholder="请输入您的处理意见" v-model="textarea" maxlength="500" show-word-limit :rows="4" resize='none'>
+              <el-input type="textarea" placeholder="请输入您的处理意见" v-model="textarea" maxlength="500" show-word-limit
+                :rows="4" resize='none'>
               </el-input>
             </div>
           </el-col>
@@ -403,6 +418,13 @@
     justify-content: flex-start;
   }
 
+  .centerRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
   .spaceRow {
     display: flex;
     flex-direction: row;
@@ -425,5 +447,13 @@
 
   .el-input el-input--suffix {
     border: none
+  }
+  
+  .behindLine::before {
+    content: ' ';
+    height: 16px;
+    width: 1px;
+    background: #dcdcdc;
+    margin: 0 20px;
   }
 </style>
