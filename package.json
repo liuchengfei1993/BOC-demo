@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "popper.js": "^1.16.1",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "compression-webpack-plugin": "^1.1.12",
     "element-ui": "^2.4.11",
     "lockr": "^0.8.5",
